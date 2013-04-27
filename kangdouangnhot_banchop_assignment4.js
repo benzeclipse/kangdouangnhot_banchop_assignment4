@@ -61,6 +61,42 @@ var endsMail      = email.length;
 
 };
 
+
+
+// add URL string
+var urlString = function ( ) {
+
+	var urlA = "http://";
+	var urlB = "https://";
+	
+	if ( urlA === "http://" ) {
+	
+			console.log("You may pass");
+	
+		}else {
+		
+		console.log("can't pass");
+	
+	};
+	
+	if ( urlB = "https://" ) {
+	
+		console.log("You may pass");
+	
+	} else {
+	
+		console.log("can't pass");
+	
+	}
+
+
+};
+
+
+
+
+
+
+
 myString();
-
-
+urlString();
