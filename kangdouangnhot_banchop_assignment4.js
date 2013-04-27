@@ -1,8 +1,8 @@
 //alert("JavaScript works!");
 
-// String telephone number and String e-mail boolean
+// String telephone 
 
-var myString = function ( ) {
+var myTelePhone = function ( ) {
 
 
 // telephone variables
@@ -16,20 +16,7 @@ var endMiddle     = teleNumber.lastIndexOf( "-" );
 var sLast     = teleNumber.lastIndexOf( "-" )+1;
 var endsTele      = teleNumber.length;
 
-
-// email variables
-var email         = "ben@fullsail.com";
-
-var endMail       = email.indexOf( "@" );
-
-var startMail     = email.indexOf( "@" )+1;
-var endMails      = email.indexOf( "." );
-
-var startLast     = email.indexOf( "." )+1;
-var endsMail      = email.length;
-
 	
-
 // telephone boolean  
 	if ( teleNumber === "407-695-0100" ) {
 	
@@ -44,6 +31,26 @@ var endsMail      = email.length;
 			console.log("Does Not pass!!!");
 		
 	}
+
+
+};
+
+// e-mail String
+var eMail = function () {
+
+// email variables
+var email         = "ben@fullsail.com";
+
+var endMail       = email.indexOf( "@" );
+
+var startMail     = email.indexOf( "@" )+1;
+var endMails      = email.indexOf( "." );
+
+var startLast     = email.indexOf( "." )+1;
+var endsMail      = email.length;
+
+	
+
 
 // email boolean
 		if ( email === "ben@fullsail.com" ) {
@@ -60,7 +67,6 @@ var endsMail      = email.length;
 	}
 
 };
-
 
 
 // add URL string
@@ -98,5 +104,6 @@ var urlString = function ( ) {
 
 
 
-myString();
+myTelePhone();
+eMail();
 urlString();
