@@ -2,27 +2,42 @@
 
 // String telephone number and String e-mail boolean
 
-var phone = function ( ) {
+var myString = function ( ) {
 
 
 // telephone variables
-var teleNumber = "407-695-0100";
-var end 	   =   teleNumber.indexOf( "-" );
-var start      = teleNumber.indexOf( "-" );
-var ends       = teleNumber.lastIndexOf("-");
+var teleNumber    = "407-695-0100";
+
+var endArea       = teleNumber.indexOf( "-" );
+
+var startTele     = teleNumber.indexOf( "-" )+1;
+var endMiddle     = teleNumber.lastIndexOf( "-" );
+
+var sLast     = teleNumber.lastIndexOf( "-" )+1;
+var endsTele      = teleNumber.length;
 
 
 // email variables
-var email      = "ben@fullsail.com";
-var endMail        = email.indexOf( "@" );
-var startMail     = email.indexOf( "." );
-var stopMail       = email.lastIndexOf(".");
+var email         = "ben@fullsail.com";
 
+var endMail       = email.indexOf( "@" );
+
+var startMail     = email.indexOf( "@" )+1;
+var endMails      = email.indexOf( "." );
+
+var startLast     = email.indexOf( "." )+1;
+var endsMail      = email.length;
+
+	
 
 // telephone boolean  
 	if ( teleNumber === "407-695-0100" ) {
-		console.log(teleNumber.substring(0, end + start + ends));
-		console.log("String passes");
+	
+		var a = teleNumber.substring (0, endArea );
+		var b = teleNumber.substring ( startTele, endMiddle );
+		var c = teleNumber.substring ( sLast , endsTele );
+
+			console.log( a , b , c );
 		
 		} else {
 
@@ -32,8 +47,11 @@ var stopMail       = email.lastIndexOf(".");
 
 // email boolean
 		if ( email === "ben@fullsail.com" ) {
-		console.log(email.substring( 0, endMail + startMail + stopMail ));
-		console.log("String passes");
+			var d = email.substring(0, endMail );
+		    var e = email.substring( startMail, endMails );
+		    var f = email.substring( startLast, endsMail);
+		    
+				console.log( d, e, f );
 		
 		} else {
 
@@ -43,6 +61,6 @@ var stopMail       = email.lastIndexOf(".");
 
 };
 
-phone();
+myString();
 
 
