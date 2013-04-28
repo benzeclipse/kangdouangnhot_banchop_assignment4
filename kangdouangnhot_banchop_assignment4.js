@@ -151,8 +151,15 @@ var capitalString = function ( h, w ) {
 
 
 
+// String number to actual number data type
 
+var dataType = function  ( thritySeven ) {
 
+var num = "37";
+
+console.log( num );
+
+};
 
 
 
@@ -172,3 +179,4 @@ numberString ( 5.0, 5 );
 
 capitalString("hello", "world");
 
+dataType("37");
