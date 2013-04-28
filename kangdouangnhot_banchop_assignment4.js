@@ -179,7 +179,7 @@ var num = 37;
 
 if ( num === 37 ) {
 
-		console.log( "You passed in a number! ", num );
+		console.log( "You passed in a number of " , num );
 
 	} else {
 
@@ -187,7 +187,6 @@ if ( num === 37 ) {
 
 
 	}
-
 
 
 };
