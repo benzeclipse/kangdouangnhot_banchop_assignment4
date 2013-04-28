@@ -152,7 +152,7 @@ var numberString = function( first, finalNum ){
 
 
 // Title case string
-// passing in arguments and changing the beginning of each word to Capital
+// passing in arguments and changing the beginning of each word to Capital letters
 
 var capitalString = function ( h, w ) {
 	console.log(h.replace ( "h", "H" ) );
@@ -174,26 +174,19 @@ var capitalString = function ( h, w ) {
 
 var dataType = function  ( thritySeven ) {
 
-var num = 37;
+	thritySeven = 37;
 
+if ( thritySeven === 37 ) {
 
-if ( num === 37 ) {
-
-		console.log( "You passed in a number of " , num );
+		console.log( "You passed in a number of " , thritySeven );
 
 	} else {
 
 		console.log( "You passed in a string!" );
 
-
 	}
 
-
 };
-
-
-
-
 
 
 
@@ -214,3 +207,5 @@ numberString ( 5.0, 5 );
 capitalString("hello", "world");
 
 dataType("37");
+
+//arraySum();
