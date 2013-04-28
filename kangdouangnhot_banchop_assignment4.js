@@ -49,6 +49,8 @@ if ( teleNumber === "407-695-0100" ) {
 
 
 
+
+
 // e-mail String
 
 var eMail = function () {
@@ -77,6 +79,9 @@ if ( email === "ben@fullsail.com" ) {
 	}
 
 };
+
+
+
 
 
 
@@ -122,6 +127,9 @@ var urlString = function ( ) {
 
 
 
+
+
+
 // Number Functions passing in two parameters
 
 var numberString = function( first, finalNum ){
@@ -131,6 +139,11 @@ var numberString = function( first, finalNum ){
 	console.log( first + finalNum );
 
 };
+
+
+
+
+
 
 
 
@@ -151,15 +164,37 @@ var capitalString = function ( h, w ) {
 
 
 
+
+
+
+
+
+
 // String number to actual number data type
 
 var dataType = function  ( thritySeven ) {
 
-var num = "37";
+var num = 37;
 
-console.log( num );
+
+if ( num === 37 ) {
+
+		console.log( "You passed in a number! ", num );
+
+	} else {
+
+		console.log( "You passed in a string!" );
+
+
+	}
+
+
 
 };
+
+
+
+
 
 
 
