@@ -1,9 +1,13 @@
 //alert("JavaScript works!");
+// SDI 
+// Term 1304
+// Banchop Ben Kangdouangnhot
+
+
+
 
 // String telephone 
-
 var myTelePhone = function ( ) {
-
 
 // telephone variables
 var teleNumber    = "407-695-0100";
@@ -11,9 +15,11 @@ var teleNumber    = "407-695-0100";
 var endArea       = teleNumber.indexOf( "-" );
 
 var startTele     = teleNumber.indexOf( "-" )+1;
+
 var endMiddle     = teleNumber.lastIndexOf( "-" );
 
-var sLast     = teleNumber.lastIndexOf( "-" )+1;
+var sLast         = teleNumber.lastIndexOf( "-" )+1;
+
 var endsTele      = teleNumber.length;
 
 	
@@ -44,9 +50,11 @@ var email         = "ben@fullsail.com";
 var endMail       = email.indexOf( "@" );
 
 var startMail     = email.indexOf( "@" )+1;
+
 var endMails      = email.indexOf( "." );
 
 var startLast     = email.indexOf( "." )+1;
+
 var endsMail      = email.length;
 
 	
@@ -75,7 +83,7 @@ var urlString = function ( ) {
 	var urlA = "http://";
 	var urlB = "https://";
 	
-	if ( urlA === "http://" ) {
+if ( urlA === "http://" ) {
 	
 			console.log("You may pass");
 	
@@ -83,9 +91,9 @@ var urlString = function ( ) {
 		
 		console.log("can't pass");
 	
-	};
+};
 	
-	if ( urlB = "https://" ) {
+if ( urlB = "https://" ) {
 	
 		console.log("You may pass");
 	
@@ -99,11 +107,23 @@ var urlString = function ( ) {
 };
 
 
+// Number Functions passing in two parameters
+var numberString = function( first, finalNum ){
 
+	finalNum = ".09323";
+
+	console.log( first + finalNum );
+
+
+};
 
 
 
 
 myTelePhone();
+
 eMail();
+
 urlString();
+
+numberString ( 5.0, 3 );
