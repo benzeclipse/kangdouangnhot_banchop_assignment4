@@ -7,205 +7,162 @@
 
 
 
+var myLib = function ( ) {
+
+	// String telephone 
+	var myTelePhone = function ( teleNumber ) { 
+
+		if ( isNaN( teleNumber ) ) {
+				return true;	
+	
+			} else {
+			
+				return false;
+			
+	}
+
+}
+
+	// e-mail String
+	var eMail = function ( email ) {
+
+		if ( isNaN ( email) ) {
+			 
+				 return true;
+			 
+			} else {
+	
+				 return false;
+		
+	}
+
+}
 
 
-// String telephone 
+	// Checking URL string
+	var urlString = function ( urlA, urlB ) {
+	
+	
+		if ( isNaN ( urlA ) ) {
+	
+				return true;
+	
+			}else {
+		
+				return false;
+	
+}
+	
+		if ( isNaN ( urlB ) ) {
+	
+				return true;
+	
+			} else {
+	
+				return false;
+	
+		}
 
-var myTelePhone = function ( ) {
+}
 
+
+	// Number Functions passing in two parameters
+	var numberString = function( first, second ){
+	
+  		var m = Math.floor ( first * second ) /1000 + first
+  		
+  		
+
+		return  m
+	
+}
+
+	// Title case string
+	// passing in arguments and changing the beginning of each word to Capital letters
+	var capitalString = function ( h) {
+		  
+	       return h
+	       
+	}
+
+
+
+	// String number to actual number data type
+
+	var dataType = function  ( number ) {
+ 
+ 	var xNum = Math.floor(number);
+ 
+ 	return xNum;
+ 	
+ }
+ 
+ 
+	return {
+	
+			"myTelePhone" 	: myTelePhone,
+			"eMail" 		: eMail,
+			"urlString" 	: urlString,
+			"numberString"  : numberString,
+			"capitalString" : capitalString,
+			"dataType" 		: dataType 
+	
+	}
+
+}
+
+
+var newLib = new myLib();
+	
+	
 	// telephone variables
 	var teleNumber    = "407-695-0100";
 	var endArea       = teleNumber.indexOf( "-" );
 	var startTele     = teleNumber.indexOf( "-" )+1;
 	var endMiddle     = teleNumber.lastIndexOf( "-" );
 	var sLast         = teleNumber.lastIndexOf( "-" )+1;
-	var endsTele      = teleNumber.length;
+	var endsTele      = teleNumber.length;			
+	var a = teleNumber.substring (0, endArea );
+	var b = teleNumber.substring ( startTele, endMiddle );
+	var c = teleNumber.substring ( sLast , endsTele );
+	console.log( a , b , c );
 	
-// telephone boolean  
 
-if ( teleNumber === "407-695-0100" ) {	
-		var a = teleNumber.substring (0, endArea );
-		var b = teleNumber.substring ( startTele, endMiddle );
-		var c = teleNumber.substring ( sLast , endsTele );
-
-		console.log( a , b , c );
-		
-	} else {
-
-		console.log("Does Not pass!!!");
-		
-	}
-
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// e-mail String
-
-var eMail = function () {
-
-// email variables
-
+	// email variables
 	var email         = "ben@fullsail.com";
 	var endMail       = email.indexOf( "@" );
 	var startMail     = email.indexOf( "@" )+1;
 	var endMails      = email.indexOf( "." );
 	var startLast     = email.indexOf( "." )+1;
-	var endsMail      = email.length;
-
-// email boolean
-
-if ( email === "ben@fullsail.com" ) {
-			var d = email.substring(0, endMail );
-		    var e = email.substring( startMail, endMails );
-		    var f = email.substring( startLast, endsMail);
-			console.log( d, e, f );
-		
-		} else {
-
-			console.log("Does Not pass!!!");
-		
-	}
-
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Checking URL string
-
-var urlString = function ( ) {
+	var endsMail      = email.length;	
+	var d = email.substring(0, endMail );
+    var e = email.substring( startMail, endMails );
+	var f = email.substring( startLast, endsMail);
+	console.log( d, e, f );
+	
+	// url variables
 	var urlA = "http://";
 	var urlB = "https://";
+    
+    var total = 5;
+    var second = 1.000;
+    
+    
+    // Capital Strings variable
+    var h = "hello";
+   
+    
 	
-	if ( urlA === "http://" ) {
-	
-			console.log("You may pass");
-	
-		}else {
-		
-			console.log("can't pass");
-	
-};
-	
-	if ( urlB = "https://" ) {
-	
-			console.log("You may pass");
-	
-		} else {
-	
-			console.log("can't pass");
-	
-	}
-
-};
-
-
-
-
-
-
-
-
-
-
-
-// Number Functions passing in two parameters
-
-var numberString = function( first, finalNum ){
-
-	finalNum = ".09323";
-
-	console.log( first + finalNum );
-
-};
-
-
-
-
-
-
-
-
-
-
-
-
-// Title case string
-// passing in arguments and changing the beginning of each word to Capital letters
-
-var capitalString = function ( h, w ) {
-	console.log(h.replace ( "h", "H" ) );
-	console.log(w.replace ( "w", "W" ) );
-
-};
-
-
-
-
-
-
-
-
-
-
-
-// String number to actual number data type
-
-var dataType = function  ( thritySeven ) {
-
-	thritySeven = 37;
-
-if ( thritySeven === 37 ) {
-
-		console.log( "You passed in a number of " , thritySeven );
-
-	} else {
-
-		console.log( "You passed in a string!" );
-
-	}
-
-};
-
-
-
-
-
-
-
 // calling all functions
+console.log("Is this a phone number... " + newLib.myTelePhone( teleNumber ));
 
-myTelePhone();
+console.log("Is this a e-mail... " + newLib.eMail( email ));
 
-eMail();
+console.log("Checking http:// and https:// is " + newLib.urlString( urlA , urlB ));
 
-urlString();
+console.log(newLib.numberString ( 5, 2 ));
 
-numberString ( 5.0, 5 );
+console.log(newLib.capitalString( h.replace ("h", "H") )); 
 
-capitalString("hello", "world");
+console.log( newLib.dataType( "37" ));
 
-dataType("37");
-
-//arraySum();
